@@ -63,7 +63,7 @@ export default function Home() {
       </div>
 
       {/* Aanbod */}
-      <section id="aanbod" className="px-6 py-32 max-w-5xl mx-auto">
+      <section id="aanbod" className="section-wide">
         <p className="text-xs tracking-[0.3em] uppercase text-white/30 mb-8">Aanbod</p>
         <h2 className="text-3xl sm:text-4xl font-bold mb-16">Wat je hier vindt</h2>
 
@@ -121,7 +121,7 @@ export default function Home() {
 
       {/* Sessie CTA */}
       <section id="sessie" className="cosmic-bg px-6 py-32">
-        <div className="max-w-2xl mx-auto text-center">
+        <div style={{maxWidth: '42rem', marginLeft: 'auto', marginRight: 'auto', textAlign: 'center'}}>
           <p className="text-xs tracking-[0.3em] uppercase text-white/30 mb-6">Spill Your Tea sessie</p>
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
             Klaar om te spillen?
@@ -136,7 +136,7 @@ export default function Home() {
       </section>
 
       {/* Contact / Volg */}
-      <section id="contact" className="px-6 py-32 max-w-3xl mx-auto">
+      <section id="contact" className="section-narrow">
         <p className="text-xs tracking-[0.3em] uppercase text-white/30 mb-8">Contact</p>
         <h2 className="text-3xl font-bold mb-12">Laten we praten</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
