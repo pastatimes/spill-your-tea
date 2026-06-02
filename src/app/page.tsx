@@ -10,7 +10,7 @@ export default function Home() {
         <div className="flex items-center gap-8 text-sm text-white/50">
           <a href="#over" className="hover:text-white transition-colors">Over</a>
           <a href="#aanbod" className="hover:text-white transition-colors">Aanbod</a>
-          <a href="#sessie" className="hover:text-white transition-colors">Sessie</a>
+          <a href="https://calendar.app.google/douZqiDQ7p39Xf6u7" className="hover:text-white transition-colors">Sessie</a>
           <a href="#contact" className="hover:text-white transition-colors">Contact</a>
         </div>
       </nav>
@@ -30,7 +30,7 @@ export default function Home() {
         </p>
         <div className="fade-up fade-up-delay-3 flex flex-col sm:flex-row gap-4 justify-center" style={{marginTop: '5rem'}}>
           <a href="#aanbod" className="btn-primary">Wat ik doe</a>
-          <a href="#sessie" className="btn-secondary">Boek een sessie</a>
+          <a href="https://calendar.app.google/douZqiDQ7p39Xf6u7" className="btn-secondary">Boek een sessie</a>
         </div>
 
         {/* Scroll indicator */}
@@ -129,7 +129,7 @@ export default function Home() {
           <p className="text-white/40 text-lg leading-relaxed mb-10">
             Boek een gesprek met mij. We praten over AI, jouw business, en hoe jij het eerlijk en slim kunt inzetten.
           </p>
-          <a href="mailto:info@kimberleyvanruiven.nl" className="btn-primary" style={{marginTop: '5rem', display: 'inline-block'}}>
+          <a href="https://calendar.app.google/douZqiDQ7p39Xf6u7" className="btn-primary" style={{marginTop: '5rem', display: 'inline-block'}}>
             Plan een sessie
           </a>
         </div>
