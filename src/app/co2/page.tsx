@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 
 type ServiceId = 'claude' | 'chatgpt' | 'gemini' | 'sonnet' | 'lechat' | 'greenpt';
@@ -67,14 +67,14 @@ export default function CO2Page() {
 
   const { values, total } = useMemo(() => {
     const mult = period === 'month' ? 30 : 1;
-    const vals = (Object.keys(FACTORS) as ServiceId[]).map(id => {
+    const vals: { id: string; g: number }[] = (Object.keys(FACTORS) as ServiceId[]).map(id => {
       const inp = services[id];
       const f = FACTORS[id];
       const g = ((inp.msgs * inp.tokens * mult / 1000) * f.whPer1kTokens / 1000) * f.gCO2PerKwh;
       return { id, g };
     });
     const localG = (local.watt * local.hours * mult / 1000) * 290;
-    vals.push({ id: 'local', g: localG });
+    vals.push({ id: 'local' as string, g: localG });
     const total = vals.reduce((s, v) => s + v.g, 0);
     return { values: vals, total };
   }, [services, local, period]);
