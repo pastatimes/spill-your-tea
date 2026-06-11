@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 
 export default function ParallaxInit() {
   useEffect(() => {
+    if (window.innerWidth > 768) return;
+
     const selectors = ['.hero', '.quote-stripe-full', '.parallax-divider'];
 
     const handleScroll = () => {
