@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Space_Grotesk, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const geist = Geist({
@@ -7,8 +7,19 @@ const geist = Geist({
   subsets: ["latin"],
 });
 
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-display",
+  subsets: ["latin"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+});
+
 export const metadata: Metadata = {
-  title: "Kimberley van Ruiven — Spill Your Tea",
+  title: "Kimberley van Ruiven · Spill Your Tea",
   description: "Ethische AI zonder bullshit. Door Kimberley van Ruiven.",
 };
 
@@ -18,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl" className={`${geist.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-black text-white">
+    <html lang="nl" className={`${geist.variable} ${spaceGrotesk.variable} ${playfair.variable}`}>
+      <body>
         {children}
       </body>
     </html>

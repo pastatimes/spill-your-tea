@@ -1,157 +1,177 @@
 export default function Home() {
   return (
-    <main className="bg-black text-white min-h-screen font-[family-name:var(--font-geist)] overflow-x-hidden">
+    <main>
 
       {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 border-b border-white/5 backdrop-blur-sm bg-black/60">
-        <span className="text-sm font-semibold tracking-widest uppercase text-white/90">
-          Spill Your Tea
-        </span>
-        <div className="flex items-center gap-8 text-sm text-white/50">
-          <a href="#over" className="hover:text-white transition-colors">Over</a>
-          <a href="#aanbod" className="hover:text-white transition-colors">Aanbod</a>
-          <a href="#sessie" className="hover:text-white transition-colors">Sessie</a>
-          <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+      <nav className="nav">
+        <span className="nav-logo">Spill Your Tea</span>
+        <div className="nav-links">
+          <a href="#over" className="nav-link">Over</a>
+          <a href="#aanbod" className="nav-link">Aanbod</a>
+          <a href="#contact" className="nav-link">Contact</a>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="cosmic-bg grain relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-28">
-        <p className="fade-up text-xs tracking-[0.3em] uppercase text-white/30 mb-6">
-          Kimberley van Ruiven
-        </p>
-        <h1 className="fade-up fade-up-delay-1 text-4xl sm:text-6xl font-bold tracking-tight leading-[1.05] max-w-3xl">
-          Ethische AI
-          <br />
-          <span className="text-white/55">zonder bullshit.</span>
+      <section className="hero">
+        <p className="hero-tag fade-up">Kimberley van Ruiven · Soul tech architect</p>
+        <h1 className="hero-title fade-up fade-up-1">
+          Ethische AI<br />
+          <span>zonder bullshit.</span>
         </h1>
-        <p className="fade-up fade-up-delay-2 mt-8 text-lg text-white/40 max-w-md leading-relaxed">
-          Geen hype, geen vaagtaal. Eerlijke verhalen over wat AI doet met mensen, bedrijven en de wereld.
+        <p className="hero-subtitle fade-up fade-up-2">
+          Voor een mens-gerichte toekomst met technologie.
         </p>
-        <div className="fade-up fade-up-delay-3 flex flex-col sm:flex-row gap-4 justify-center" style={{marginTop: '5rem'}}>
-          <a href="#aanbod" className="btn-primary">Wat ik doe</a>
+        <div className="hero-buttons fade-up fade-up-3">
+          <a href="#over" className="btn-primary">Wie ik ben</a>
           <a href="https://calendar.app.google/douZqiDQ7p39Xf6u7" className="btn-secondary">Spill Your Tea</a>
         </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/20">
-          <span className="text-xs tracking-widest uppercase">Scroll</span>
-          <div className="w-px h-12 bg-gradient-to-b from-white/20 to-transparent" />
+        <div className="scroll-indicator">
+          <span>Scroll</span>
+          <div className="scroll-line" />
         </div>
       </section>
 
       {/* Over */}
-      <section id="over" className="section-center">
-        <p className="text-xs tracking-[0.3em] uppercase text-white/30 mb-8">Over</p>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-8 break-words">
-          Ik geloof dat je AI kunt begrijpen
-          <span className="text-white/55"> zonder dat je technicus hoeft te zijn.</span>
-        </h2>
-        <div className="space-y-5 text-white/60 leading-relaxed text-lg">
-          <p>
-            Ik ben Kimberley van Ruiven. Online ondernemer, denker en iemand die zich actief verdiept in ethische AI: wat het betekent, wat het doet, en hoe we het eerlijker kunnen maken.
-          </p>
-          <p>
-            Spill Your Tea is mijn plek om dat te delen. Geen academisch jargon, geen ongefundeerde hype. Gewoon eerlijke gesprekken over een onderwerp dat iedereen raakt.
-          </p>
+      <section id="over" className="section-wide">
+        <span className="section-label">Over</span>
+
+        <div className="over-grid">
+          <div className="over-left">
+            <h2 className="section-heading">Wie ik ben</h2>
+            <div className="prose">
+              <p>
+                Ik ben Kimberley, voormalig IT consultant en gespecialiseerd in ethische AI en AI-bias vanuit mijn academische achtergrond MSc Information Studies. Ik werk met AI vanuit een zo ethisch, bewuste en verantwoordelijke manier en ik help je om je bedrijf aan de achterkant op orde te krijgen, zodat je productiever en met meer structuur kunt werken.
+              </p>
+              <p>
+                Ik geloof dat technologie en menselijkheid samen kunnen gaan, en dat vrouwelijke perspectieven onmisbaar zijn in hoe we AI bouwen en gebruiken. Vanuit een achtergrond in informatiekunde, AI-bias en ethiek help ik ondernemers en kleine bedrijven begrijpen wat ze gebruiken, wat dat betekent, en hoe ze het verantwoord kunnen inrichten.
+              </p>
+            </div>
+          </div>
+
+          <div className="over-right">
+            <a href="#" className="callout callout-link">
+              <p className="callout-italic">
+                Ik gids ondernemers bewuster om te gaan met AI en te schalen vanuit integriteit.
+              </p>
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="max-w-3xl mx-auto px-6">
-        <div className="h-px bg-white/5" />
+      {/* Grote quote */}
+      <div className="quote-stripe-full">
+        <div className="quote-section">
+          <p className="quote-text">
+            <span className="quote-serif">Technologie en menselijkheid</span><br />
+            gaan <em>samen.</em>
+          </p>
+        </div>
       </div>
+
+      {/* Divider */}
+      <div className="divider-section"><hr /></div>
 
       {/* Aanbod */}
       <section id="aanbod" className="section-wide">
-        <p className="text-xs tracking-[0.3em] uppercase text-white/30 mb-8">Aanbod</p>
-        <h2 className="text-3xl sm:text-4xl font-bold mb-16">Wat je hier vindt</h2>
+        <span className="section-label">Aanbod</span>
+        <h2 className="section-heading">Wat ik aanbied</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          {[
-            {
-              label: "01",
-              title: "Lees & leer",
-              desc: "Artikelen en dashboards over ethische AI, bias, vertrouwen en wat het betekent voor jou als ondernemer.",
-              cta: "Lees verder",
-              href: "#",
-            },
-            {
-              label: "02",
-              title: "Spill Your Tea sessie",
-              desc: "Een één-op-één gesprek over hoe jij als ondernemer omgaat met AI: eerlijk, praktisch en zonder jargon.",
-              cta: "Spill Your Tea",
-              href: "https://calendar.app.google/douZqiDQ7p39Xf6u7",
-            },
-            {
-              label: "03",
-              title: "Volg me",
-              desc: "Op Instagram deel ik dagelijkse inzichten, vragen en eerlijke meningen over AI en ondernemen.",
-              cta: "Naar Instagram",
-              href: "https://instagram.com",
-            },
-            {
-              label: "04",
-              title: "AI CO₂ Calculator",
-              desc: "Bereken hoeveel CO₂ jouw AI-gebruik uitstoot — en ontdek groenere alternatieven.",
-              cta: "Open calculator",
-              href: "/co2",
-            },
-          ].map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="group block p-8 border rounded-2xl transition-all duration-300 border-white/10 hover:border-white/30 hover:bg-white/[0.03]"
-            >
-              <span className="text-xs text-white/20 font-mono">{item.label}</span>
-              <h3 className="mt-4 text-xl font-semibold mb-3">{item.title}</h3>
-              <p className="text-white/40 text-sm leading-relaxed mb-6">{item.desc}</p>
-              <span className="text-sm font-medium text-white/60 group-hover:text-white transition-colors">
-                {item.cta} →
-              </span>
-            </a>
-          ))}
+        <div className="cards-grid">
+
+          <a href="/co2" className="card card-featured">
+            <span className="card-label">01</span>
+            <h3 className="card-title">AI CO₂ Calculator</h3>
+            <p className="card-desc">Bereken hoeveel CO₂ jouw AI-gebruik uitstoot en ontdek groenere alternatieven.</p>
+            <span className="card-cta">Open calculator →</span>
+          </a>
+
+          <div className="dienst-card-static">
+            <span className="card-label">02</span>
+            <h3 className="card-title" style={{marginTop: '1rem', marginBottom: '0.75rem'}}>Gratis Ethical AI Checklist</h3>
+            <p className="card-desc">Ontdek hoe bewust jij omgaat met AI in je bedrijf. De checklist helpt je inzicht te krijgen in je huidige gebruik en mogelijke blinde vlekken.</p>
+            <span className="badge">Binnenkort beschikbaar</span>
+          </div>
+
+          <a href="#" className="card">
+            <span className="card-label">03</span>
+            <h3 className="card-title">Lees &amp; leer</h3>
+            <p className="card-desc">Artikelen en dashboards over ethische AI, bias, vertrouwen en wat het betekent voor jou als ondernemer.</p>
+            <span className="card-cta">Lees verder →</span>
+          </a>
+
+          <a href="https://www.instagram.com/kimberleyvanruiven" className="card card-featured">
+            <span className="card-label">04</span>
+            <h3 className="card-title">Volg me</h3>
+            <p className="card-desc">Op Instagram deel ik inzichten, vragen en eerlijke meningen over AI en ondernemen.</p>
+            <span className="card-cta">Naar Instagram →</span>
+          </a>
+
         </div>
       </section>
 
+      {/* Diensten */}
+      <section className="section-wide">
+        <span className="section-label">Werk met mij</span>
+        <h2 className="section-heading">Persoonlijk aanbod</h2>
+        <div className="diensten-grid">
+
+          <div className="dienst-blok">
+            <h3 className="dienst-title">Strippenkaart Bewuste AI</h3>
+            <p className="dienst-desc">Een vast aanspreekpunt voor alles rondom verantwoord AI-gebruik in je bedrijf. Tien uur hulp voor kwartaalchecks, vragen over nieuwe tools of sparren over ethische vraagstukken.</p>
+            <a href="https://calendar.app.google/douZqiDQ7p39Xf6u7" className="btn-primary">Plan een kennismaking</a>
+          </div>
+
+          <div className="dienst-blok">
+            <h3 className="dienst-title">Losse sessie</h3>
+            <p className="dienst-desc">Één uur gerichte hulp, precies waar jij op dat moment behoefte aan hebt. Vastzit met een technisch vraagstuk of wil sparren over AI? Je boekt wanneer het jou uitkomt.</p>
+            <a href="https://calendar.app.google/douZqiDQ7p39Xf6u7" className="btn-primary">Boek een sessie</a>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Parallax divider */}
+      <div className="parallax-divider" />
+
       {/* Sessie CTA */}
-      <section id="sessie" className="cosmic-bg px-6 py-32">
-        <div style={{maxWidth: '42rem', marginLeft: 'auto', marginRight: 'auto', textAlign: 'center'}}>
-          <p className="text-xs tracking-[0.3em] uppercase text-white/30 mb-6">Spill Your Tea sessie</p>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Klaar om te spillen?
-          </h2>
-          <p className="text-white/40 text-lg leading-relaxed mb-10">
-            Boek een gesprek met mij. We praten over AI, jouw business, en hoe jij het eerlijk en slim kunt inzetten.
+      <section id="sessie" className="cta-section">
+        <div className="cta-inner">
+          <span className="section-label">Spill Your Tea sessie</span>
+          <h2 className="cta-title">Klaar om te spillen?</h2>
+          <p className="cta-text">
+            Boek een gesprek met mij. We praten over AI, jouw business, en hoe jij het eerlijk, verantwoord en efficiënt kunt inzetten.
           </p>
-          <a href="https://calendar.app.google/douZqiDQ7p39Xf6u7" className="btn-primary" style={{marginTop: '5rem', display: 'inline-block'}}>
+          <a href="https://calendar.app.google/douZqiDQ7p39Xf6u7" className="btn-primary">
             Spill Your Tea
           </a>
         </div>
       </section>
 
-      {/* Contact / Volg */}
-      <section id="contact" className="section-narrow">
-        <p className="text-xs tracking-[0.3em] uppercase text-white/30 mb-8">Contact</p>
-        <h2 className="text-3xl font-bold mb-12">Laten we praten</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
-          {[
-            { label: "Email", value: "info@kimberleyvanruiven.nl", href: "mailto:info@kimberleyvanruiven.nl" },
-            { label: "Instagram", value: "@kimberleyvanruiven", href: "https://www.instagram.com/kimberleyvanruiven" },
-            { label: "LinkedIn", value: "Kimberley van Ruiven", href: "https://www.linkedin.com/in/kimberley-van-ruiven" },
-          ].map((item) => (
-            <a key={item.label} href={item.href} className="group">
-              <p className="text-white/25 text-xs tracking-widest uppercase mb-2">{item.label}</p>
-              <p className="text-white/60 group-hover:text-white transition-colors">{item.value}</p>
-            </a>
-          ))}
+      {/* Contact */}
+      <section id="contact" className="section">
+        <span className="section-label">Contact</span>
+        <h2 className="section-heading">Laten we praten</h2>
+        <div className="contact-grid">
+          <a href="mailto:info@kimberleyvanruiven.nl" className="contact-item">
+            <span className="contact-label">Email</span>
+            <span className="contact-value">info@kimberleyvanruiven.nl</span>
+          </a>
+          <a href="https://www.instagram.com/kimberleyvanruiven" className="contact-item">
+            <span className="contact-label">Instagram</span>
+            <span className="contact-value">@kimberleyvanruiven</span>
+          </a>
+          <a href="https://www.linkedin.com/in/kimberley-van-ruiven" className="contact-item">
+            <span className="contact-label">LinkedIn</span>
+            <span className="contact-value">Kimberley van Ruiven</span>
+          </a>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/5 px-8 py-8 flex items-center justify-between text-xs text-white/20">
+      <footer className="footer">
         <span>© 2026 Kimberley van Ruiven</span>
-        <span className="tracking-widest uppercase">Spill Your Tea</span>
+        <span className="footer-brand">Spill Your Tea</span>
       </footer>
 
     </main>
